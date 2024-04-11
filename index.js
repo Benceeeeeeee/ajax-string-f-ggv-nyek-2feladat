@@ -43,7 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     function hossz(){
         let ertek = bekezdesInput.value;
-        let rendezetlenLista = "<ul>";
+        let szavak = ertek.split("");
+        let szoHossz = 0;
+        szavak.forEach(szo => {
+                szoHossz += 1;
+            }
+        );
+        bekezdes.innerHTML = szoHossz;
+    }
+
+    szokozNelkul.addEventListener("click", () => {
+        KarakterekSzama()
+    });
+    function KarakterekSzama(){
+        let ertek = bekezdesInput.value;
         let szavak = ertek.split("");
         let szoHossz = 0;
         szavak.forEach(szo => {
