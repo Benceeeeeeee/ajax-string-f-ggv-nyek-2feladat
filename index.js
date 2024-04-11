@@ -37,4 +37,20 @@ document.addEventListener("DOMContentLoaded", () => {
         rendezetlenLista += "</ul>"
         bekezdes.innerHTML = rendezetlenLista;
     }
+
+    hossza.addEventListener("click", () => {
+        hossz()
+    });
+    function hossz(){
+        let ertek = bekezdesInput.value;
+        let rendezetlenLista = "<ul>";
+        let szavak = ertek.split("");
+        let szoHossz = 0;
+        szavak.forEach(szo => {
+            if(szo != " "){
+                szoHossz += 1;
+            }
+        });
+        bekezdes.innerHTML = szoHossz;
+    }
 });
